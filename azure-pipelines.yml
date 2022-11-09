@@ -41,8 +41,9 @@ $SystemUsers = Get-D365ODataEntityData -EntityName SystemUsers -ODataQuery '$fil
 $payload = '{"Enabled": "true"}'
 #set the field names and the desired values to update
 
-foreach ($user in $SystemUsers)
-{
+- task: PowerShell@2
+  inputs:
+    filePath: 'https://dev.azure.com/sravanthi0224/ProgramOne/_apps/hub/ms.vss-build-web.ci-designer-hub?pipelineId=1&nonce=h1hwrNOKEe9ZLlEQBQHinA%3D%3D&branch=main'{
     #iterate through the users and create the [key, payload] array
     $userId = $user.UserID
     if($SystemUsersToUpdateNew)
