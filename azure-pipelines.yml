@@ -26,7 +26,7 @@ write-host "az installed"
 Install-Module -Name d365fo.integrations  -AllowClobber -Scope CurrentUser -Force -Confirm:$false
 write-host "d365fo.integrations installed"
  
-Add-D365ODataConfig -Name "D365EnableUsers" -Tenant "AzureTenantId" -url "https://yourenvironment.sandbox.operations.dynamics.com" -ClientId "AzureApplicationId" -ClientSecret "AzureApplicationClientSecret"
+Add-D365ODataConfig -Name "D365EnableUsers" -Tenant "AzureTenantId" -url "https://online24x7uat.sandbox.operations.dynamics.com/" -ClientId "AzureApplicationId" -ClientSecret "AzureApplicationClientSecret"
 write-host "Config added"
  
 Set-D365ActiveODataConfig -Name D365EnableUsers
